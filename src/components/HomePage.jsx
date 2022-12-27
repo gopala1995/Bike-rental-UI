@@ -5,6 +5,7 @@ import { ButtomFile } from "./ButtomFile";
 export const HomePage = () => {
   return (
     <div>
+    <div>
       <img
         style={{ width: "100%", zIndex: "-1", position: "absolute" }}
         src={"RBX_30.jpg"}
@@ -12,7 +13,6 @@ export const HomePage = () => {
       <div>
         <Box
           sx={{
-            marginLeft: "150px ",
             display: "flex",
             flexWrap: "wrap",
             "& > :not(style)": {
@@ -22,9 +22,11 @@ export const HomePage = () => {
             },
           }}
         >
-          <Paper elevation={3} />
+          <Paper elevation={3} style={{ margin: "150px auto auto 150px" }} />
         </Box>
       </div>
+      </div>
+      <ButtomFile/>
     </div>
   );
 };
