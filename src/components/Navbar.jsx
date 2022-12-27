@@ -12,6 +12,7 @@ import { Select } from "@mui/material";
 import { MenuItem } from "@mui/material";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import { HomePage } from "./HomePage";
+import { ButtomFile } from "./ButtomFile";
 
 const TopTypo = styled(Typography)`
   background-color: #fed250;
@@ -97,7 +98,7 @@ export const Navbar = () => {
           <Btn style={{ marginLeft: "50px" }}>Signup</Btn>
         </ToolB>
       </HedBar>
-      <HomePage/>
+      <HomePage />
     </div>
   );
 };
