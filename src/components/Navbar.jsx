@@ -11,6 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Select } from "@mui/material";
 import { MenuItem } from "@mui/material";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import { HomePage } from "./HomePage";
 
 const TopTypo = styled(Typography)`
   background-color: #fed250;
@@ -34,7 +35,6 @@ const SelectIOption = styled(Select)`
   width: 150px;
   height: 35px;
   margin-left: 25px;
-  border: 0px;
 `;
 
 const Btn = styled(Button)`
@@ -60,22 +60,36 @@ export const Navbar = () => {
             style={{ width: "70px", height: "40px", marginLeft: "60px" }}
           />
           <TritBar>Tariff</TritBar>
-          <SelectIOption>
-            <MenuItem>What's new?</MenuItem>
+          <SelectIOption
+            displayEmpty
+            inputProps={{ "aria-label": "Without label" }}
+          >
+            <MenuItem>
+              <em>What's new?</em>
+            </MenuItem>
             <MenuItem>store</MenuItem>
             <MenuItem>Inter-city travels</MenuItem>
           </SelectIOption>
           <TritBar>Offer</TritBar>
-          <SelectIOption>
-            <MenuItem>Partner with us</MenuItem>
+          <SelectIOption displayEmpty>
+            <MenuItem>
+              <em>Partner with us</em>
+            </MenuItem>
             <MenuItem>Earn with us</MenuItem>
             <MenuItem>Own a franchise</MenuItem>
           </SelectIOption>
           <SelectIOption
-            style={{ marginLeft: "80px", border: "1px solid  #fed250" }}
+            displayEmpty
+            style={{
+              marginLeft: "80px",
+              height: "35px",
+              border: "1px solid  #fed250",
+            }}
           >
             <MenuItem>
-              <LocationOnOutlinedIcon />
+              <LocationOnOutlinedIcon
+                style={{ paddingTop: "3px auto auto auto" }}
+              />
               Banglore
             </MenuItem>
           </SelectIOption>
@@ -83,6 +97,7 @@ export const Navbar = () => {
           <Btn style={{ marginLeft: "50px" }}>Signup</Btn>
         </ToolB>
       </HedBar>
+      <HomePage/>
     </div>
   );
 };
